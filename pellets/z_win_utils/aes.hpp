@@ -1626,12 +1626,12 @@ inline void ZLAes::_CbcEncrypt(
 }
 
 inline void ZLAes::_EcbDecrypt(
-                               const unsigned long* rk,
-                               const int            rounds,
-                               const unsigned char* in,
-                               const size_t         in_size,
-                               unsigned char*       out
-                               )
+    const unsigned long* rk,
+    const int            rounds,
+    const unsigned char* in,
+    const size_t         in_size,
+    unsigned char*       out
+    )
 {
     size_t block_count = in_size / 16;
     while (block_count)
@@ -1643,7 +1643,13 @@ inline void ZLAes::_EcbDecrypt(
     }
 }
 
-inline void ZLAes::_CbcDecrypt( const unsigned long *rk, const int rounds, const unsigned char* in, const size_t in_size, unsigned char* out )
+inline void ZLAes::_CbcDecrypt(
+    const unsigned long* rk,
+    const int            rounds,
+    const unsigned char* in,
+    const size_t         in_size,
+    unsigned char*       out
+    )
 {
     size_t block_count = in_size / 16;
 
