@@ -328,7 +328,7 @@ Exit0:
             TCHAR* pValue = new TCHAR[ulChars];
             bReturn = GetMultiSzValue(lpValueName, pValue, &ulChars);
             _ParseDNTString(pValue, vecValues);
-            delete pValue;
+            delete []pValue;
         }
         return bReturn;
     }
